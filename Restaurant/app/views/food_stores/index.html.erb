@@ -1,0 +1,10 @@
+<h1>FoodStores</h1>
+<a href="/logout" data-method="post">Logout</a>
+
+<button id="show_form">Add Food Store</button>
+<form action="/food_stores" method="post" id="create_form" hidden>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="text" name="name">
+  <input type="submit" value="Create Food Store">
+</form>
+

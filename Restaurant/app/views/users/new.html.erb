@@ -1,0 +1,16 @@
+<h1>Users</h1>
+<form action="/users" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<label for="username">Username:</label>
+<input type="text" name="username">
+<br>
+<label for="password">Password:</label>
+<input type="password" name="password">
+<br>
+<input type="submit" value="Login or Register">
+</form>
+<% if flash[:error] %>
+  <% flash[:error].each do |error| %>
+    <p style="color: red;"><%= error %></p>
+  <% end %>
+<% end %>
